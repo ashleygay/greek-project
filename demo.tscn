@@ -1,5 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://player.tres" type="SpriteFrames" id=1]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 28.0073
+height = 13.7253
+
+[node name="Player" type="Area2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 1 )
+animation = "left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

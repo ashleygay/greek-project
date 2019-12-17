@@ -24,6 +24,11 @@ config/name="greek project"
 run/main_scene="res://demo.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=480
+window/size/height=720
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
