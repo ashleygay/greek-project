@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://demo.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 28.0073
 height = 13.7253
 
 [node name="Player" type="Area2D"]
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -17,4 +19,4 @@ frames = ExtResource( 1 )
 animation = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
